@@ -137,6 +137,12 @@ body {
 }
 .page_main-block{}
 
+.page_services{
+    position: relative;
+    z-index: 2;
+    margin: -111px 0 0 0;
+}
+
 /*Main-block___________________________________________*/
 .main-block{
     position: relative;
@@ -148,6 +154,12 @@ body {
     z-index: 2;
     max-width: 400px;
 }
+@media (max-width: 992px) {
+    .main-block_body{
+        padding: 120px 0 191px 0;
+    }
+}
+
 .main-block_body > *:not(:last-child){
     margin: 0 0 35px 0;
 }
@@ -157,17 +169,29 @@ body {
     line-height: calc(80/58*100%);
     font-weight: 800;
 }
+
+@media (max-width: 479px) {
+    .main-block_title{
+        font-size: 42px;
+    }
+}
+
 .main-block_text{
     font-size: 20px;
     color: #737373;
     line-height: 150%;
-
+}
+@media (max-width: 479px) {
+    .main-block_text{
+        color: #585757;
+    }
 }
 .main-block_buttons{
-    display: inline-flex;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px 0 ;
 }
 .main-block_button{
-
     border-radius: 37px;
     display: flex;
     justify-content: center;
@@ -175,14 +199,22 @@ body {
     padding: 5px 36px;
     min-height: 48px;
     letter-spacing: 0.2px;
-
     line-height: 200%;
     font-weight: 700;
     text-align: center;
+    margin: 10px 0;
 
 }
-.main-block_button:not(:last-child){
-    margin: 0 10px 0 0;
+
+@media (max-width: 479px) {
+    .main-block_button{
+        flex: 1 1 100%;
+    }
+}
+@media (min-width: 479px) {
+    .main-block_button:not(:last-child){
+        margin-right: 10px;
+    }
 }
 .main-block_button_border{
     color: #0d5c63;
@@ -205,6 +237,90 @@ body {
         object-position: right;
     }
 }
+@media (max-width: 992px) {
+    .main-block_image img{
+        opacity: 0.5;
+    }
+}
+
+/*Сервис---------------------------------------------*/
+.page_services{}
+.services{}
+.services_container{
+}
+.services_body{
+
+}
+@media (min-width: 670px){
+    .services_body{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+    }
+}
+.services_column{
+    flex: 0 1 33.333%;
+
+}
+
+@media (min-width: 670px){
+    .services_column{
+        padding: 0 15px;
+    }
+
+}
+
+@media (max-width: 992px){
+    .services_column{
+    flex: 0 1 50%;
+    }
+    .services_column:last-child{
+        flex: 1 1 100%;
+    }
+    .services_column:not(:last-child){
+        margin: 0 0 30px 0;
+    }
+}
+.services_item{
+    height: 100%;
+    box-shadow: 0 13px 19px rgba(0, 0, 0, 0.07) ;
+    background-color: #fff;
+    padding: 35px;
+}
+
+@media (max-width: 479px){
+    .services_item{
+        padding: 25px;
+    }
+}
+.item-service{}
+.item-service > *:not(:last-child){
+    margin: 0 0 10px 0;
+}
+
+.item-service_green{
+    background-color: #0d5c63;
+}
+
+.item-service_green .item-service_title{
+    color: #fff;
+}
+
+.item-service_green .item-service_text{
+    color: #fff;
+}
+.item-service_icon{}
+.item-service_title{
+    font-weight: 700;
+    letter-spacing: 0.1px;
+    font-size: 24px;
+    line-height: 133%;
+}
+.item-service_text{
+    color: #737373;
+    line-height: 142%;
+}
+
 /*Футер----------------------------------------------*/
 .footer{
 
