@@ -1,3 +1,5 @@
+/*----------сброс стилей----------*/
+/*убираем отступы и указываем box-sizing*/
 *,
 *::before,
 *::after {
@@ -6,7 +8,7 @@
     border: 0;
     box-sizing: border-box;
 }
-
+/*убираем стили браузера для ссылок и списков*/
 a {
     text-decoration: none;
 }
@@ -16,11 +18,11 @@ ol,
 li {
     list-style: none;
 }
-
+/*выравнивание по верхнему краю для всех изображений*/
 img {
     vertical-align: top;
 }
-
+/*наследование размера и стииля шрифта для всех заголовков*/
 h1,
 h2,
 h3,
@@ -30,7 +32,7 @@ h6 {
     font-weight: inherit;
     font-size: inherit;
 }
-
+/*указываем базовые стили*/
 html,
 body {
     height: 100%;
@@ -41,10 +43,10 @@ body {
     color: #252B42;
     background: #fafafa;
 }
-
+/*класс обертка для всего контента страницы*/
 .wrapper {
     min-height: 100%;
-    overflow: hidden;
+    overflow: hidden; /*Контент обрезается, без предоставления прокрутки.*/
     display: flex;
     flex-direction: column;
 }
